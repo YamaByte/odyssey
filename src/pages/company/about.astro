@@ -1,0 +1,33 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'About | Astro Odyssey Theme',
+	description: 'About Page',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>About Us</h1>
+		</div>
+    </picture>
+	</HeroSection>
+  <TextSection narrow>
+    <p>
+      YamaByte was founded to bridge the glaring gap between the rapid advancements in AI capabilities and slow businesses' adoption.
+    </p>
+    <p>
+      Today, many firms from various industries are eager to adopt AI methodologies and tools to bring increased profits, efficient operations, and intelligent insights. While that dream is certainly valid and practical, we see that many firms do not know where to start, or understand how AI can be applied in their context.
+    </p>
+    <p>
+      That's where YamaByte comes in.
+    </p>
+    <p>
+      Founded by an AI Researcher (Ph.D.) and a professional Data Scientist (M.Sc.), YamaByte will serve as your partner and educator in your adoption of practical and effective AI solutions. The team has experience in launching real-world applications of AI in "first mover" companies previously; and we can't wait for you to be our next success story!
+    </p>
+  </TextSection>
+</Layout>

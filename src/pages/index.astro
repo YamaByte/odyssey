@@ -1,0 +1,71 @@
+---
+import { Container, FeatureCard } from '@components/odyssey-theme';
+
+import Layout from '../layouts/Page.astro';
+import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+---
+
+<Layout>
+	<HomeHeroSection />
+	<Container>
+		<section class="feature-card__section">
+			<h2>Discover</h2>
+			<div class="feature-card__grid">
+				<FeatureCard 
+					href="/company/about" 
+					title="About" 
+					imgSrc="/assets/images/home/screenshots/about">
+				</FeatureCard>
+				<FeatureCard
+					href="/blog/posts/remote-work-mental-health"
+					title="Blog Posts"
+          			imgSrc="/assets/images/home/screenshots/blog-post-image"
+				>
+				</FeatureCard>
+				<FeatureCard 
+					href="/company/contact" 
+					title="Contact" 
+					imgSrc="/assets/images/home/screenshots/contact">
+				</FeatureCard>
+				
+			</div>
+		</section>
+	</Container>
+
+	<Container>
+		<section class="feature-card__section">
+			<h2>Theme Pages</h2>
+			<p>Learn more about how to set up and use the Odyssey Theme.</p>
+			<div class="feature-card__grid">
+				<FeatureCard
+					href="/theme/get-started"
+					imgSrc="/assets/images/home/screenshots/get-started"
+					title="Get Started"
+				>
+				</FeatureCard>
+				<FeatureCard
+					href="/theme/style-guide"
+					imgSrc="/assets/images/home/screenshots/style-guide"
+					title="Style Guide"
+				>
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
