@@ -1,5 +1,5 @@
 ---
-import { TextSection } from '@components/odyssey-theme';
+import { Container, TextSection, TextCardSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
 import HeroSection from '../../components/sections/heros/HeroSection.astro';
 
@@ -10,12 +10,11 @@ const seo = {
 ---
 
 <Layout {seo}>
-	<HeroSection>
-		<div slot="text-container">
+	<Container>
+		<TextCardSection>
 			<h1>About Us</h1>
-		</div>
-    </picture>
-	</HeroSection>
+		</TextCardSection>
+	</Container>
   <TextSection narrow>
     <p>
       YamaByte was founded to bridge the glaring gap between the rapid advancements in AI capabilities and slow businesses' adoption.
@@ -31,3 +30,4 @@ const seo = {
     </p>
   </TextSection>
 </Layout>
+
